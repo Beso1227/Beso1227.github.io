@@ -1,0 +1,45 @@
+# robots.txt for beso1227.github.io (site root)
+#
+# This file is authoritative for every project site under this domain, including
+# https://beso1227.github.io/Deltempo/. GitHub Pages only serves robots.txt from the
+# host root, so project-level copies are informational.
+#
+# Deltempo is fully open source (MIT) and intended for indexing by search engines
+# and answer engines alike. Nothing here is private or user-specific.
+
+User-agent: *
+Allow: /
+
+# Explicit allowances for AI / answer engines (redundant with the blanket allow
+# above, but recorded so intent survives any future default change).
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Machine-readable context is deliberately public.
+Allow: /Deltempo/llms.txt
+Allow: /Deltempo/llms-full.txt
+Allow: /Deltempo/ai-catalog.json
+
+Sitemap: https://beso1227.github.io/sitemap.xml
+Sitemap: https://beso1227.github.io/Deltempo/sitemap.xml
