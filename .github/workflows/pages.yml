@@ -62,10 +62,9 @@ jobs:
           python-version: '3.12'
 
       - name: Render the host-root files
-        working-directory: site-source
         run: |
           python -m pip install --disable-pip-version-check --quiet Pillow
-          node scripts/render_host_root.js --out ../host-root
+          node site-source/scripts/render_host_root.js --out host-root
 
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
@@ -73,7 +72,7 @@ jobs:
       - name: Upload the host root
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          path: '../host-root'
+          path: 'host-root'
 
       - name: Deploy
         id: deployment
